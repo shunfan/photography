@@ -1,0 +1,36 @@
+/* This is the core css file for the gallery.
+ * Designed by Shunfan Du.
+ */
+html {
+  font-family: 'Fira Sans', "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+.spotlight {
+  height: 100vh;
+  background: url(http://i.imgur.com/blrtFi9.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-top: 3px solid cornsilk; }
+  .spotlight > .brand {
+    display: inline-block;
+    padding: 0.3em 0.8em;
+    font-size: 1.2em;
+    background-color: cornsilk;
+    border-radius: 0 0 5px 0; }
+
+.main-content {
+  margin: 0 auto;
+  padding: 30px 0;
+  max-width: 1440px; }
+
+.album {
+  padding: 0 1em 1em 1em; }
+  .album > .name {
+    margin-bottom: 0.5em;
+    font-size: 1.8em; }
+  .album figure {
+    margin: 0 0;
+    display: inline-block; }
+
+/*# sourceMappingURL=core.css.map */
