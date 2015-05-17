@@ -6,7 +6,7 @@ html {
 
 .spotlight {
   height: 100vh;
-  background: url(http://i.imgur.com/blrtFi9.jpg) no-repeat center center fixed;
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/tibet/image49.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -30,7 +30,9 @@ html {
     margin-bottom: 0.5em;
     font-size: 1.8em; }
   .album figure {
-    margin: 0 0;
-    display: inline-block; }
+    margin: 0 0; }
+    .album figure img {
+      max-width: 100%;
+      max-height: 100%; }
 
 /*# sourceMappingURL=core.css.map */

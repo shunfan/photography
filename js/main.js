@@ -1,3 +1,16 @@
+var tibet = document.getElementById('tibet');
+var vertical_images = [1, 2, 5, 6, 9, 10, 11, 16, 46, 50, 51, 54, 57];
+for(var i = 1; i < 70; i++) {
+  if(vertical_images.indexOf(i) >= 0) {
+    tibet.insertAdjacentHTML('beforeend', '<div class="box size23"><figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"><a href="https://s3-us-west-1.amazonaws.com/perry-asia/tibet/image' + i + '.jpg" itemprop="contentUrl" data-size="720x1080"><img src="https://s3-us-west-1.amazonaws.com/perry-asia/tibet/thumbnail' + i + '.jpg" itemprop="thumbnail" /></a></figure></div>')
+  } else {
+    tibet.insertAdjacentHTML('beforeend', '<div class="box size32"><figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"><a href="https://s3-us-west-1.amazonaws.com/perry-asia/tibet/image' + i + '.jpg" itemprop="contentUrl" data-size="1620x1080"><img src="https://s3-us-west-1.amazonaws.com/perry-asia/tibet/thumbnail' + i + '.jpg" itemprop="thumbnail" /></a></figure></div>')
+
+  }
+}
+
+$("#tibet").nested({selector: '.box', minWidth: 30, gutter: 3});
+
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
   // parse slide data (url, title, size ...) from DOM elements
