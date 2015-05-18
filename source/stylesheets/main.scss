@@ -81,17 +81,6 @@ textarea {
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
@@ -105,9 +94,18 @@ html {
   font-family: 'Fira Sans', "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
+a {
+  color: darken($green, 30%);
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 3px solid darken($green, 30%);
+  }
+}
+
 .spotlight {
   height: 100vh; // 1 monitor height
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/tibet/image49.jpg) no-repeat center center fixed;
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/tibet/image49.jpg) no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -178,13 +176,8 @@ html {
   >.container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 50px 1em;
+    padding: 50px 3em;
     color: $cornsilk;
-    
-    img {
-      width: 2em;
-      height: 2em;
-    }
   }
 }
 
@@ -232,11 +225,6 @@ html {
 
     >.container {
       padding: 30px 1em !important;
-
-      img {
-        width: 1.8em !important;
-        height: 1.8em !important;
-      }
     }
   }
 }
@@ -268,11 +256,6 @@ html {
 
     >.container {
       padding: 20px 1em !important;
-
-      img {
-        width: 1.8em !important;
-        height: 1.8em !important;
-      }
     }
   }
 }
