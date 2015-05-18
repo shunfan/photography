@@ -11,28 +11,80 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  border-top: 3px solid cornsilk; }
-  .spotlight > .brand {
+  border-top: 3px solid #FFF8DC; }
+  .spotlight .brand {
     display: inline-block;
     padding: 0.3em 0.8em;
     font-size: 1.2em;
-    background-color: cornsilk;
+    color: #E8871E;
+    background-color: #FFF8DC;
     border-radius: 0 0 5px 0; }
 
-.main-content {
-  margin: 0 auto;
-  padding: 30px 0;
-  max-width: 1440px; }
+.loading {
+  height: 250px;
+  line-height: 250px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #D4D4AA;
+  background-color: #FFF8DC; }
 
-.album {
-  padding: 0 1em 1em 1em; }
+.album > .name {
+  max-width: 1440px;
+  margin: 30px auto;
+  padding: 0 0.5em;
+  font-size: 1.8em;
+  color: #EDB458; }
+.album > .gallery {
+  background-color: #FFF8DC; }
+  .album > .gallery .size23 {
+    width: 10%; }
+  .album > .gallery .size32 {
+    width: 10%; }
+.album figure {
+  margin: 0 0;
+  display: inline-block; }
+  .album figure img {
+    max-width: 100%; }
+
+/* Medium desktop */
+@media (min-width: 1200px) {
+  .size23 {
+    width: 10% !important; }
+
+  .size32 {
+    width: 10% !important; } }
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .size23 {
+    width: 20% !important; }
+
+  .size32 {
+    width: 20% !important; } }
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
   .album > .name {
-    margin-bottom: 0.5em;
-    font-size: 1.8em; }
-  .album figure {
-    margin: 0 0; }
-    .album figure img {
-      max-width: 100%;
-      max-height: 100%; }
+    font-size: 1.5em;
+    margin: 22px auto; }
+
+  .size23 {
+    width: 25% !important; }
+
+  .size32 {
+    width: 25% !important; } }
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .brand {
+    padding: 0.2em 0.6em !important;
+    font-size: 1.6em !important; }
+
+  .album > .name {
+    font-size: 1.3em !important;
+    margin: 20px auto !important; }
+
+  .size23 {
+    width: 33.33% !important; }
+
+  .size32 {
+    width: 33.33% !important; } }
 
 /*# sourceMappingURL=core.css.map */
