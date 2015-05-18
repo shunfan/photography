@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title><%= current_page.data.title || "Perry's Gallery" %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <%= stylesheet_link_tag "normalize", "main", "photoswipe", "default-skin/default-skin" %>
+    <%= javascript_include_tag  "photoswipe", "photoswipe-ui-default" %>
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="<%= page_classes %>">
+    <%= yield %>
+    <footer id="footer">
+      <div class="container">
+        © 2015 Shunfan Du
+        <div class="push-right">
+          Powered by <a href="https://middlemanapp.com/"><img src="/images/middleman-logo.svg"></a>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <%= javascript_include_tag "packery.pkgd.min", "main" %>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+  </body>
+</html>
