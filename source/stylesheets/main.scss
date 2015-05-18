@@ -141,7 +141,7 @@ html {
   >.name {
     max-width: 1440px;
     margin: 30px auto;
-    padding: 0 0.5em;
+    padding: 0 1em;
     font-size: 1.8em;
     color: $yellow;
   }
@@ -178,7 +178,7 @@ html {
   >.container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 1em;
     color: $cornsilk;
     
     img {
@@ -226,11 +226,23 @@ html {
   .size32 {
     width: 25% !important;
   }
+
+  #footer {
+    font-size: 1em !important;
+
+    >.container {
+      padding: 30px 1em !important;
+
+      img {
+        width: 1.8em !important;
+        height: 1.8em !important;
+      }
+    }
+  }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-
   .brand {
     padding: 0.2em 0.6em !important;
     font-size: 1.6em !important;
@@ -249,6 +261,19 @@ html {
 
   .size32 {
     width: 33.33% !important;
+  }
+
+  #footer {
+    font-size: 1em !important;
+
+    >.container {
+      padding: 20px 1em !important;
+
+      img {
+        width: 1.8em !important;
+        height: 1.8em !important;
+      }
+    }
   }
 }
 
