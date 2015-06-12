@@ -231,6 +231,10 @@ a {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .spotlight {
+    height: 50vh; // 1 monitor height
+  }
+
   .brand {
     padding: 0.2em 0.6em !important;
     font-size: 1.6em !important;
