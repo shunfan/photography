@@ -76,12 +76,56 @@ if (nepal != undefined) {
     $('.loading').remove();
 
     // Show the gallery now
-    $('#tibet-gallery').show();
     $('#nepal-gallery').show();
 
     var nepal_container = document.querySelector('#nepal-gallery');
 
     var pckry = new Packery(nepal_container, {
+      // options
+      itemSelector: '.item',
+    });
+  });
+}
+
+var ebc = document.getElementById('ebc-gallery');
+
+if (ebc != undefined) {
+  // Hide the gallery first
+  $('#ebc-gallery').hide();
+
+  // EBC Handler
+  var ebc_vertical_images = [8, 10, 19, 23, 27, 35, 53, 56];
+  for(var i = 1; i < 72; i++) {
+    if(ebc_vertical_images.indexOf(i) >= 0) {
+      ebc.insertAdjacentHTML('beforeend', '<figure class="item size23" itemprop="associatedMedia"' +
+          'itemscope itemtype="http://schema.org/ImageObject">' +
+          '<a href="https://s3-us-west-1.amazonaws.com/perry-asia/ebc/image' + i +
+          '.jpg" itemprop="contentUrl" data-size="720x1080">' +
+          '<img src="https://s3-us-west-1.amazonaws.com/perry-asia/ebc/thumbnail' + i +
+          '.jpg" itemprop="thumbnail" /></a></figure></div>')
+    } else {
+      ebc.insertAdjacentHTML('beforeend', '<figure class="item size32" itemprop="associatedMedia"' +
+          'itemscope itemtype="http://schema.org/ImageObject">' +
+          '<a href="https://s3-us-west-1.amazonaws.com/perry-asia/ebc/image' + i +
+          '.jpg" itemprop="contentUrl" data-size="1620x1080">' +
+          '<img src="https://s3-us-west-1.amazonaws.com/perry-asia/ebc/thumbnail' + i +
+          '.jpg" itemprop="thumbnail" /></a></figure>')
+    }
+  }
+
+  $('.loading').html("Loading...");
+
+  // After all the images are loaded
+  $(window).load(function(){
+    // Remove the loading bar
+    $('.loading').remove();
+
+    // Show the gallery now
+    $('#ebc-gallery').show();
+
+    var ebc_container = document.querySelector('#ebc-gallery');
+
+    var pckry = new Packery(ebc_container, {
       // options
       itemSelector: '.item',
     });
