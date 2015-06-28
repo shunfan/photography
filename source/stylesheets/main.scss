@@ -84,6 +84,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Color variables */
+
 $cornsilk: #FFF8DC;
 $green: #BAD4AA;
 $tea: #D4D4AA;
@@ -91,6 +93,8 @@ $yellow: #EDB458;
 $orange: #E8871E;
 $black: #222;
 $white: #fff;
+
+/* Basic features */
 
 html {
   font-family: 'Fira Sans', "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -104,14 +108,23 @@ a {
   text-decoration: none;
 }
 
-#header >.container,
-#footer >.container,
-.album >.name {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+button.sl-button {
+  margin-top: 90vh;
+  padding: 4px 15px;
+  color: $cornsilk;
+  font-size: 20px;
+  border: 2px solid $cornsilk;
+  border-radius: 999px;
+  background: 0;
+  outline: 0;
+
+  &:hover {
+    color: $orange;
+    border: 2px solid $orange;
+  }
 }
+
+/* Spotlight */
 
 .spotlight-ebc {
   background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc.jpg) no-repeat center center;
@@ -134,22 +147,18 @@ a {
   background-size: cover;
 }
 
-button.sl-button {
-  margin-top: 90vh;
-  padding: 4px 15px;
-  color: $cornsilk;
-  font-size: 20px;
-  border: 2px solid $cornsilk;
-  border-radius: 999px;
-  background: 0;
-  outline: 0;
+/* Make them center */
 
-  &:hover {
-    color: $orange;
-    border: 2px solid $orange;
-  }
+#header >.container,
+#footer >.container,
+article.main-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
+/* Header */
 #header {
   position: fixed;
   top: 0;
@@ -184,6 +193,28 @@ button.sl-button {
   }
 }
 
+/* Main */
+.main-container {
+  min-height: 100vh;
+}
+
+article.main-content {
+  margin-top: 73px;
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    color: $orange;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Footer */
 #footer {
   font-size: 1.2em;
   background-color: $green;
@@ -203,11 +234,7 @@ button.sl-button {
   }
 }
 
-
-.main-content {
-
-}
-
+/* Gallery and album */
 .album {
   min-height: 100vh;
   text-align: center;
