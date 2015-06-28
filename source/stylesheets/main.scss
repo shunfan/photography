@@ -113,6 +113,10 @@ a {
   padding-right: 20px;
 }
 
+.spotlight-ebc {
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc.jpg) no-repeat center center;
+}
+
 .spotlight-nepal {
   background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal.jpg) no-repeat center center;
 }
@@ -209,6 +213,7 @@ button.sl-button {
   text-align: center;
 
   >.loading {
+    display: inline-block;
     margin-top: 50vh;
     font-size: 1.3em;
     color: $tea;
@@ -270,6 +275,10 @@ button.sl-button {
 
   .size32 {
     width: 25% !important;
+  }
+
+  .spotlight-ebc {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat center center;
   }
 
   .spotlight-nepal {
