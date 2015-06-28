@@ -89,62 +89,134 @@ $green: #BAD4AA;
 $tea: #D4D4AA;
 $yellow: #EDB458;
 $orange: #E8871E;
+$black: #222;
+$white: #fff;
 
 html {
   font-family: 'Fira Sans', "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
-a {
-  color: darken($green, 30%);
-  text-decoration: none;
-
-  &:hover {
-    border-bottom: 3px solid darken($green, 30%);
-  }
+body {
+  background-color: $cornsilk;
 }
 
-.spotlight {
-  height: 100vh; // 1 monitor height
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/tibet/image63.jpg) no-repeat bottom center fixed;
+a {
+  text-decoration: none;
+}
+
+#header >.container,
+#footer >.container,
+.album >.name {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.spotlight-nepal {
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal.jpg) no-repeat center center;
+}
+
+.spotlight-tibet {
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet.jpg) no-repeat center center;
+}
+
+[class|="spotlight"] {
+  height: 100vh;
+  text-align: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  border-top: 3px solid $cornsilk;
+}
 
-  .brand {
-    display: inline-block;
-    padding: 0.3em 0.8em;
-    font-size: 1.2em;
+button.sl-button {
+  margin-top: 90vh;
+  padding: 4px 15px;
+  color: $cornsilk;
+  font-size: 20px;
+  border: 2px solid $cornsilk;
+  border-radius: 999px;
+  background: 0;
+  outline: 0;
+
+  &:hover {
     color: $orange;
-    background-color: $cornsilk;
-    border-radius: 0 0 5px 0;
+    border: 2px solid $orange;
   }
 }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.5em;
+  background-color: $cornsilk;
+  opacity: 0.8;
+  z-index: 999;
+
+  >.container {
+    color: $orange;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .logo {
+      float: left;
+      width: 20px;
+      height: 33px;
+      background: url(https://s3-us-west-1.amazonaws.com/perry-asia/brand/logo.svg);
+      background-size: 20px 33px;
+    }
+
+    .name {
+      float: left;
+      padding: 0 0 0 0.4em;
+    }
+
+    a {
+      color: $orange;
+    }
+  }
+}
+
+#footer {
+  font-size: 1.2em;
+  background-color: $green;
+
+  >.container {
+    color: $cornsilk;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    a {
+      color: darken($green, 30%);
+
+      &:hover {
+        border-bottom: 3px solid darken($green, 30%);
+      }
+    }
+  }
+}
+
 
 .main-content {
 
 }
 
-.loading {
-  height: 250px;
-  line-height: 250px;
-  text-align: center;
-  font-size: 1.2em;
-  color: $tea;
-  background-color: $cornsilk;
-}
-
 .album {
-  >.name {
-    max-width: 1440px;
-    margin: 30px auto;
-    padding: 0 1em;
-    font-size: 1.8em;
-    color: $yellow;
+  min-height: 100vh;
+  text-align: center;
+
+  >.loading {
+    display: inline-block;
+    margin-top: 50vh;
+    font-size: 1.3em;
+    color: $tea;
   }
 
   >.gallery {
+    margin-top: 73px;
     background-color: $cornsilk;
 
     .item {
@@ -166,18 +238,6 @@ a {
     img {
       max-width: 100%;
     }
-  }
-}
-
-#footer {
-  background-color: $green;
-  font-size: 1.2em;
-
-  >.container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 50px 3em;
-    color: $cornsilk;
   }
 }
 
@@ -205,13 +265,6 @@ a {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  .album {
-    >.name {
-      font-size: 1.5em;
-      margin: 22px auto;
-    }
-  }
-
   .size23 {
     width: 25% !important;
   }
@@ -220,33 +273,25 @@ a {
     width: 25% !important;
   }
 
-  #footer {
-    font-size: 1em !important;
+  .spotlight-nepal {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile.jpg) no-repeat center center;
+  }
 
-    >.container {
-      padding: 30px 1em !important;
-    }
+  .spotlight-tibet {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile.jpg) no-repeat center center;
+  }
+
+  [class|="spotlight"] {
+    height: 50vh;
+  }
+
+  button.sl-button {
+    margin-top: 43vh;
   }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .spotlight {
-    height: 50vh; // 1 monitor height
-  }
-
-  .brand {
-    padding: 0.2em 0.6em !important;
-    font-size: 1.6em !important;
-  }
-
-  .album {
-    >.name {
-      font-size: 1.3em !important;
-      margin: 20px auto !important;
-    }
-  }
-
   .size23 {
     width: 33.33% !important;
   }
@@ -256,8 +301,6 @@ a {
   }
 
   #footer {
-    font-size: 1em !important;
-
     >.container {
       padding: 20px 0 !important;
       text-align: center;
