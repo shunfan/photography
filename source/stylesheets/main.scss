@@ -108,6 +108,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 button.sl-button {
   margin-top: 90vh;
   padding: 4px 15px;
@@ -122,29 +127,6 @@ button.sl-button {
     color: $orange;
     border: 2px solid $orange;
   }
-}
-
-/* Spotlight */
-
-.spotlight-ebc {
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc.jpg) no-repeat center center;
-}
-
-.spotlight-nepal {
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal.jpg) no-repeat center center;
-}
-
-.spotlight-tibet {
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet.jpg) no-repeat center center;
-}
-
-[class|="spotlight"] {
-  height: 100vh;
-  text-align: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 /* Make them center */
@@ -176,10 +158,10 @@ article.main-content {
 
     .logo {
       float: left;
-      width: 20px;
+      width: 23.7px;
       height: 33px;
       background: url(https://s3-us-west-1.amazonaws.com/perry-asia/brand/logo.svg);
-      background-size: 20px 33px;
+      background-size: 23.7px 33px;
     }
 
     .name {
@@ -232,6 +214,29 @@ article.main-content {
       }
     }
   }
+}
+
+/* Spotlight */
+
+.spotlight-ebc {
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc.jpg) no-repeat center center;
+}
+
+.spotlight-nepal {
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal.jpg) no-repeat center center;
+}
+
+.spotlight-tibet {
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet.jpg) no-repeat center center;
+}
+
+[class|="spotlight"] {
+  height: 100vh;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Gallery and album */
@@ -304,6 +309,38 @@ article.main-content {
     width: 25% !important;
   }
 
+  #header {
+    font-size: 1.2em;
+
+    >.container {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      .logo {
+        width: 18.7px;
+        height: 26px;
+        background-size: 18.7px 26px;
+      }
+    }
+  }
+
+  #footer {
+    font-size: 1.1em;
+
+    >.container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  article.main-content {
+    margin-top: 0;
+  }
+
+  #spotlights {
+    margin-top: 50px;
+  }
+
   .spotlight-ebc {
     background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat center center;
   }
@@ -323,6 +360,26 @@ article.main-content {
   button.sl-button {
     margin-top: 38vh;
   }
+
+  .album {
+    >.gallery {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+  .spotlight-ebc {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile@2x.jpg) no-repeat center center;
+  }
+
+  .spotlight-nepal {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile@2x.jpg) no-repeat center center;
+  }
+
+  .spotlight-tibet {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile@2x.jpg) no-repeat center center;
+  }
 }
 
 /* Landscape phones and down */
@@ -336,8 +393,10 @@ article.main-content {
   }
 
   #footer {
+    font-size: 1.1em;
+    
     >.container {
-      padding: 20px 0 !important;
+      padding: 18px 0 !important;
       text-align: center;
 
       .push-right {
