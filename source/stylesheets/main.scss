@@ -84,7 +84,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* Color variables */
+/* Variables */
 
 $cornsilk: #FFF8DC;
 $green: #BAD4AA;
@@ -93,6 +93,9 @@ $yellow: #EDB458;
 $orange: #E8871E;
 $black: #222;
 $white: #fff;
+
+$header-height: 73px;
+$logo-ratio: 0.718875502;
 
 /* Basic features */
 
@@ -158,10 +161,10 @@ article.main-content {
 
     .logo {
       float: left;
-      width: 23.7px;
+      width: 33px * $logo-ratio;
       height: 33px;
       background: url(https://s3-us-west-1.amazonaws.com/perry-asia/brand/logo.svg);
-      background-size: 23.7px 33px;
+      background-size: 33px * $logo-ratio 33px;
     }
 
     .name {
@@ -181,7 +184,7 @@ article.main-content {
 }
 
 article.main-content {
-  margin-top: 73px;
+  margin-top: $header-height;
 
   p {
     font-size: 18px;
@@ -252,7 +255,7 @@ article.main-content {
   }
 
   >.gallery {
-    margin-top: 73px;
+    margin-top: $header-height;
     background-color: $cornsilk;
 
     .item {
@@ -301,6 +304,8 @@ article.main-content {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+  $header-height: 50px;
+
   .size23 {
     width: 25% !important;
   }
@@ -317,9 +322,9 @@ article.main-content {
       padding-bottom: 12px;
 
       .logo {
-        width: 18.7px;
+        width: 26px * $logo-ratio;
         height: 26px;
-        background-size: 18.7px 26px;
+        background-size: 26px * $logo-ratio 26px;
       }
     }
   }
@@ -334,11 +339,11 @@ article.main-content {
   }
 
   article.main-content {
-    margin-top: 0;
+    margin-top: $header-height;
   }
 
   #spotlights {
-    margin-top: 50px;
+    margin-top: $header-height;
   }
 
   .spotlight-ebc {
@@ -363,7 +368,7 @@ article.main-content {
 
   .album {
     >.gallery {
-      margin-top: 50px;
+      margin-top: $header-height;
     }
   }
 }
@@ -394,7 +399,7 @@ article.main-content {
 
   #footer {
     font-size: 1.1em;
-    
+
     >.container {
       padding: 18px 0 !important;
       text-align: center;
