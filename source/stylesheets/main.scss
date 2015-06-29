@@ -116,22 +116,6 @@ p {
   margin-bottom: 1em;
 }
 
-button.sl-button {
-  margin-top: 90vh;
-  padding: 4px 15px;
-  color: $cornsilk;
-  font-size: 20px;
-  border: 2px solid $cornsilk;
-  border-radius: 999px;
-  background: 0;
-  outline: 0;
-
-  &:hover {
-    color: $orange;
-    border: 2px solid $orange;
-  }
-}
-
 /* Make them center */
 
 #header >.container,
@@ -240,6 +224,27 @@ article.main-content {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  >.container {
+    padding-top: 100vh;
+
+    button.sl-button {
+      position: relative;
+      bottom: 100px;
+      padding: 4px 15px;
+      color: $cornsilk;
+      font-size: 20px;
+      border: 2px solid $cornsilk;
+      border-radius: 999px;
+      background: 0;
+      outline: 0;
+
+      &:hover {
+        color: $orange;
+        border: 2px solid $orange;
+      }
+    }
+  }
 }
 
 /* Gallery and album */
@@ -351,23 +356,31 @@ article.main-content {
   }
 
   .spotlight-ebc {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat center center;
+    background: 0;
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat;
   }
 
   .spotlight-nepal {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile.jpg) no-repeat center center;
+    background: 0;
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile.jpg) no-repeat;
   }
 
   .spotlight-tibet {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile.jpg) no-repeat center center;
+    background: 0;
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile.jpg) no-repeat;
   }
 
   [class|="spotlight"] {
     height: 50vh;
-  }
+    background-size: cover;
 
-  button.sl-button {
-    margin-top: 38vh;
+    >.container {
+      padding-top: 50vh;
+
+      button.sl-button {
+        bottom: 80px;
+      }
+    }
   }
 
   .album {
@@ -377,6 +390,7 @@ article.main-content {
   }
 }
 
+/* For retina display */
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   .spotlight-ebc {
     background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile@2x.jpg) no-repeat center center;
