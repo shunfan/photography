@@ -356,29 +356,29 @@ article.main-content {
   }
 
   .spotlight-ebc {
-    background: 0;
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat;
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat center center;
   }
 
   .spotlight-nepal {
-    background: 0;
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile.jpg) no-repeat;
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile.jpg) no-repeat center center;
   }
 
   .spotlight-tibet {
-    background: 0;
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile.jpg) no-repeat;
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile.jpg) no-repeat center center;
   }
 
   [class|="spotlight"] {
-    height: 50vh;
-    background-size: cover;
+    height: auto;
+    background-size: 100% !important;
 
     >.container {
-      padding-top: 50vh;
+      position: relative;
+      padding-top: calc(100% * 2/3 - 40px);
 
       button.sl-button {
-        bottom: 80px;
+        display: block;
+        margin: 0 auto;
+        bottom: 50px;
       }
     }
   }
