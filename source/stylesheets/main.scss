@@ -395,6 +395,8 @@ article.main-content {
   }
 
   .album {
+    margin-top: $header-height;
+    
     >.gallery {
       margin-top: $header-height;
     }
