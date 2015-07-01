@@ -107,13 +107,18 @@ body {
   background-color: $cornsilk;
 }
 
-a {
-  text-decoration: none;
+h1 {
+  font-size: 1.3em;
 }
 
 p {
+  font-size: 18px;
   margin-top: 0;
   margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Make them center */
@@ -164,15 +169,11 @@ article.main-content {
 
 /* Main */
 .main-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 73px); // Can not use $header-height
 }
 
 article.main-content {
   margin-top: $header-height;
-
-  p {
-    font-size: 18px;
-  }
 
   a {
     color: $orange;
@@ -204,6 +205,9 @@ article.main-content {
 }
 
 /* Spotlight */
+.spotlight-kilimanjaro {
+  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/kilimanjaro.jpg) no-repeat center center;
+}
 
 .spotlight-ebc {
   background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc.jpg) no-repeat center center;
@@ -249,7 +253,7 @@ article.main-content {
 
 /* Gallery and album */
 .album {
-  min-height: 100vh;
+  margin-top: $header-height;
   text-align: center;
 
   >.loading {
@@ -260,7 +264,6 @@ article.main-content {
   }
 
   >.gallery {
-    margin-top: $header-height;
     background-color: $cornsilk;
 
     .item {
@@ -355,6 +358,10 @@ article.main-content {
     margin-top: $header-height;
   }
 
+  .spotlight-kilimanjaro {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/kilimanjaro-mobile.jpg) no-repeat center center;
+  }
+
   .spotlight-ebc {
     background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat center center;
   }
@@ -392,6 +399,10 @@ article.main-content {
 
 /* For retina display */
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+  .spotlight-kilimanjaro {
+    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/kilimanjaro-mobile@2x.jpg) no-repeat center center;
+  }
+
   .spotlight-ebc {
     background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile@2x.jpg) no-repeat center center;
   }
