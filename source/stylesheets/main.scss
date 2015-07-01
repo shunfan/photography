@@ -346,6 +346,10 @@ article.main-content {
     }
   }
 
+  .main-container {
+    min-height: calc(100vh - 50px); // Can not use $header-height
+  }
+
   article.main-content {
     margin-top: $header-height;
 
