@@ -95,6 +95,8 @@ $black: #222;
 $white: #fff;
 
 $header-height: 73px;
+$footer-height: 86px;
+$loading-height: 30px;
 $logo-ratio: 0.718875502;
 
 /* Basic features */
@@ -107,12 +109,7 @@ body {
   background-color: $cornsilk;
 }
 
-h1 {
-  font-size: 1.3em;
-}
-
 p {
-  font-size: 18px;
   margin-top: 0;
   margin-bottom: 1em;
 }
@@ -139,7 +136,7 @@ article.main-content {
   left: 0;
   width: 100%;
   font-size: 1.5em;
-  background-color: $cornsilk;
+  background-color: darken($cornsilk, 5%);
   opacity: 0.8;
   z-index: 999;
 
@@ -169,11 +166,19 @@ article.main-content {
 
 /* Main */
 .main-container {
-  min-height: calc(100vh - 73px); // Can not use $header-height
+  min-height: calc(100vh - #{$footer-height});
 }
 
 article.main-content {
-  margin-top: $header-height;
+  padding-top: $header-height;
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 18px;
+  }
 
   a {
     color: $orange;
@@ -253,13 +258,13 @@ article.main-content {
 
 /* Gallery and album */
 .album {
-  margin-top: $header-height;
+  padding-top: $header-height;
   text-align: center;
 
   >.loading {
     display: inline-block;
-    margin-top: 50vh;
-    font-size: 1.3em;
+    margin-top: calc((100vh - #{$header-height} - #{$footer-height} - #{$loading-height}) / 2);
+    font-size: 1.4em;
     color: $tea;
   }
 
@@ -312,7 +317,8 @@ article.main-content {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  $header-height: 50px;
+  $header-height: 53px;
+  $footer-height: 65px;
 
   .size23 {
     width: 25% !important;
@@ -323,16 +329,16 @@ article.main-content {
   }
 
   #header {
-    font-size: 1.2em;
+    font-size: 1.3em;
 
     >.container {
       padding-top: 12px;
       padding-bottom: 12px;
 
       .logo {
-        width: 26px * $logo-ratio;
-        height: 26px;
-        background-size: 26px * $logo-ratio 26px;
+        width: 29px * $logo-ratio;
+        height: 29px;
+        background-size: 29px * $logo-ratio 29px;
       }
     }
   }
@@ -347,11 +353,15 @@ article.main-content {
   }
 
   .main-container {
-    min-height: calc(100vh - 50px); // Can not use $header-height
+    min-height: calc(100vh - #{$footer-height});
   }
 
   article.main-content {
-    margin-top: $header-height;
+    padding-top: $header-height;
+
+    h1 {
+      font-size: 1.2em;
+    }
 
     p {
       font-size: 16px;
@@ -395,10 +405,10 @@ article.main-content {
   }
 
   .album {
-    margin-top: $header-height;
-    
-    >.gallery {
-      margin-top: $header-height;
+    padding-top: $header-height;
+
+    >.loading {
+      margin-top: calc((100vh - #{$header-height} - #{$footer-height} - #{$loading-height}) / 2);
     }
   }
 }
@@ -424,12 +434,19 @@ article.main-content {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  $header-height: 53px;
+  $footer-height: 86px;
+
   .size23 {
     width: 33.33% !important;
   }
 
   .size32 {
     width: 33.33% !important;
+  }
+
+  .main-container {
+    min-height: calc(100vh - #{$footer-height});
   }
 
   #footer {
@@ -443,6 +460,12 @@ article.main-content {
         float: none;
         display: block;
       }
+    }
+  }
+
+  .album {
+    >.loading {
+      margin-top: calc((100vh - #{$header-height} - #{$footer-height} - #{$loading-height}) / 2);
     }
   }
 }
