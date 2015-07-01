@@ -460,6 +460,12 @@ article.main-content {
         float: none;
         display: block;
       }
+
+      a {
+        &:hover {
+          border: 0;
+        }
+      }
     }
   }
 
