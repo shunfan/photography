@@ -170,6 +170,7 @@ article.main-content {
 }
 
 article.main-content {
+  float: left; // To prevent the article from reaching the minimum height and making blank space
   padding-top: $header-height;
 
   h1 {
@@ -446,7 +447,7 @@ article.main-content {
   }
 
   .main-container {
-    min-height: calc(100vh - #{$footer-height});
+    min-height: 100vh;
   }
 
   #footer {
@@ -471,7 +472,7 @@ article.main-content {
 
   .album {
     >.loading {
-      margin-top: calc((100vh - #{$header-height} - #{$footer-height} - #{$loading-height}) / 2);
+      margin-top: calc((100vh - #{$header-height} - #{$loading-height}) / 2);
     }
   }
 }
