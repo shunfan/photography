@@ -122,7 +122,7 @@ a {
 
 #header >.container,
 #footer >.container,
-article.main-content {
+.page-container {
   max-width: 1440px;
   margin: 0 auto;
   padding-left: 20px;
@@ -174,7 +174,7 @@ article.main-content {
   padding-top: $header-height;
 
   h1 {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
 
   p {
@@ -318,7 +318,7 @@ article.main-content {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  $header-height: 53px;
+  $header-height: 54px;
   $footer-height: 65px;
 
   .size23 {
@@ -330,16 +330,16 @@ article.main-content {
   }
 
   #header {
-    font-size: 1.3em;
+    font-size: 1.4em;
 
     >.container {
       padding-top: 12px;
       padding-bottom: 12px;
 
       .logo {
-        width: 29px * $logo-ratio;
-        height: 29px;
-        background-size: 29px * $logo-ratio 29px;
+        width: 30px * $logo-ratio;
+        height: 30px;
+        background-size: 30px * $logo-ratio 30px;
       }
     }
   }
@@ -361,7 +361,7 @@ article.main-content {
     padding-top: $header-height;
 
     h1 {
-      font-size: 1.2em;
+      font-size: 1.3em;
     }
 
     p {
@@ -435,7 +435,7 @@ article.main-content {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  $header-height: 53px;
+  $header-height: 54px;
   $footer-height: 86px;
 
   .size23 {
