@@ -77,12 +77,12 @@
     <script>
       // Set country code to US as default
       window.country_code = "US";
-      // Use freegeoip.net to get the country code of the local ip
+      // Get the country code of the local ip
       function getIP(json) {
-        window.country_code = json.country_code;
+        window.country_code = json.countryCode;
       }
     </script>
-    <script src="https://freegeoip.net/json/?callback=getIP"></script>
+    <script src="http://ip-api.com/json/?callback=getIP"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <%= javascript_include_tag 'main', 'packery.pkgd.min', 'photoswipe-init', 'gallery' %>
 
