@@ -8,7 +8,7 @@
     <meta name="description" content="Here is Perry's gallery, it includes many pictures that were took during my traveling, trekking, and mountaineering.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
     <%= stylesheet_link_tag 'normalize', 'main', 'photoswipe', 'default-skin/default-skin' %>
-    <%= javascript_include_tag  'photoswipe', 'photoswipe-ui-default' %>
+    <%= javascript_include_tag 'enquire.min', 'photoswipe', 'photoswipe-ui-default' %>
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700' rel='stylesheet' type='text/css'>
     <link rel="apple-touch-icon" href="https://s3-us-west-1.amazonaws.com/perry-asia/brand/apple-touch-icon.png">
     <%= favicon_tag 'https://s3-us-west-1.amazonaws.com/perry-asia/brand/favicon.png' %>
@@ -74,8 +74,17 @@
     <%= partial 'footer' %>
 
     <!-- Javascript files that will be loaded in the end. -->
+    <script>
+      // Set country code to US as default
+      window.country_code = "US";
+      // Use freegeoip.net to get the country code of the local ip
+      function getIP(json) {
+        window.country_code = json.country_code;
+      }
+    </script>
+    <script src="https://freegeoip.net/json/?callback=getIP"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <%= javascript_include_tag 'packery.pkgd.min', 'main', 'gallery' %>
+    <%= javascript_include_tag 'main', 'packery.pkgd.min', 'photoswipe-init', 'gallery' %>
 
     <!-- Google Analytics. -->
     <script>

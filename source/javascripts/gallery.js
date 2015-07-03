@@ -51,6 +51,22 @@ if (tibet.object != undefined) {
 }
 
 function loadGallery(gallery) {
+    function getImageUrl(gallery, index) {
+        if (country_code == "CN") {
+            return "http://7xk4al.com1.z0.glb.clouddn.com/" + gallery.name + "-image" + index + ".jpg";
+        } else {
+            return "https://s3-us-west-1.amazonaws.com/perry-asia/" + gallery.name + "/image" + index + ".jpg";
+        }
+    }
+
+    function getThumbnailUrl(gallery, index) {
+        if (country_code == "CN") {
+            return "http://7xk4al.com1.z0.glb.clouddn.com/" + gallery.name + "-thumbnail" + index + ".jpg";
+        } else {
+            return "https://s3-us-west-1.amazonaws.com/perry-asia/" + gallery.name + "/thumbnail" + index + ".jpg";
+        }
+    }
+
     // Hide the gallery at first
     $(gallery.id).hide();
 
@@ -59,17 +75,13 @@ function loadGallery(gallery) {
         if(gallery.vertical_images.indexOf(i) >= 0) {
             gallery.object.insertAdjacentHTML('beforeend', '<figure class="item size23" itemprop="associatedMedia"' +
                 'itemscope itemtype="http://schema.org/ImageObject">' +
-                '<a href="https://s3-us-west-1.amazonaws.com/perry-asia/' + gallery.name + '/image' + i +
-                '.jpg" itemprop="contentUrl" data-size="720x1080">' +
-                '<img src="https://s3-us-west-1.amazonaws.com/perry-asia/' + gallery.name + '/thumbnail' + i +
-                '.jpg" itemprop="thumbnail" /></a></figure></div>')
+                '<a href="' + getImageUrl(gallery, i) + '" itemprop="contentUrl" data-size="720x1080">' +
+                '<img src="' + getThumbnailUrl(gallery, i) + '" itemprop="thumbnail" /></a></figure></div>');
         } else {
             gallery.object.insertAdjacentHTML('beforeend', '<figure class="item size32" itemprop="associatedMedia"' +
                 'itemscope itemtype="http://schema.org/ImageObject">' +
-                '<a href="https://s3-us-west-1.amazonaws.com/perry-asia/' + gallery.name + '/image' + i +
-                '.jpg" itemprop="contentUrl" data-size="1620x1080">' +
-                '<img src="https://s3-us-west-1.amazonaws.com/perry-asia/' + gallery.name + '/thumbnail' + i +
-                '.jpg" itemprop="thumbnail" /></a></figure>')
+                '<a href="' + getImageUrl(gallery, i) + '" itemprop="contentUrl" data-size="1620x1080">' +
+                '<img src="' + getThumbnailUrl(gallery, i) + '" itemprop="thumbnail" /></a></figure>');
         }
     }
 

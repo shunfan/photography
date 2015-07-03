@@ -149,7 +149,6 @@ a {
       float: left;
       width: 33px * $logo-ratio;
       height: 33px;
-      background: url(https://s3-us-west-1.amazonaws.com/perry-asia/brand/logo.svg);
       background-size: 33px * $logo-ratio 33px;
     }
 
@@ -211,29 +210,12 @@ article.main-content {
 }
 
 /* Spotlight */
-.spotlight-kilimanjaro {
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/kilimanjaro.jpg) no-repeat center center;
-}
-
-.spotlight-ebc {
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc.jpg) no-repeat center center;
-}
-
-.spotlight-nepal {
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal.jpg) no-repeat center center;
-}
-
-.spotlight-tibet {
-  background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet.jpg) no-repeat center center;
-}
-
 [class|="spotlight"] {
   height: 100vh;
   text-align: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   >.container {
     padding-top: 100vh;
@@ -373,22 +355,6 @@ article.main-content {
     margin-top: $header-height;
   }
 
-  .spotlight-kilimanjaro {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/kilimanjaro-mobile.jpg) no-repeat center center;
-  }
-
-  .spotlight-ebc {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile.jpg) no-repeat center center;
-  }
-
-  .spotlight-nepal {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile.jpg) no-repeat center center;
-  }
-
-  .spotlight-tibet {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile.jpg) no-repeat center center;
-  }
-
   [class|="spotlight"] {
     height: auto;
     background-size: 100% !important;
@@ -416,21 +382,6 @@ article.main-content {
 
 /* For retina display */
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
-  .spotlight-kilimanjaro {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/kilimanjaro-mobile@2x.jpg) no-repeat center center;
-  }
-
-  .spotlight-ebc {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/ebc-mobile@2x.jpg) no-repeat center center;
-  }
-
-  .spotlight-nepal {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/nepal-mobile@2x.jpg) no-repeat center center;
-  }
-
-  .spotlight-tibet {
-    background: url(https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/tibet-mobile@2x.jpg) no-repeat center center;
-  }
 }
 
 /* Landscape phones and down */
