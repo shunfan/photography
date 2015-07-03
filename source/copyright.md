@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Copyright
 ---
 
 # Copyright Notice and Photo Credits
