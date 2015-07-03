@@ -20,7 +20,7 @@ function getSpotlightUrl(filename) {
 
 $(".logo").css({"background-image": "url(" + getBrandUrl("logo.svg") + ")"});
 
-enquire.register("(min-width: 767px)", function() {
+enquire.register("(min-width: 768px)", function() {
     $(".spotlight-kilimanjaro").css({"background-image": "url(" + getSpotlightUrl("kilimanjaro.jpg") + ")"});
     $(".spotlight-ebc").css({"background-image": "url(" + getSpotlightUrl("ebc.jpg") + ")"});
     $(".spotlight-nepal").css({"background-image": "url(" + getSpotlightUrl("nepal.jpg") + ")"});
@@ -28,15 +28,9 @@ enquire.register("(min-width: 767px)", function() {
 });
 
 enquire.register("(max-width: 767px)", function() {
+    console.log("(max-width: 767px)");
     $(".spotlight-kilimanjaro").css({"background-image": "url(" + getSpotlightUrl("kilimanjaro-mobile.jpg") + ")"});
     $(".spotlight-ebc").css({"background-image": "url(" + getSpotlightUrl("ebc-mobile.jpg") + ")"});
     $(".spotlight-nepal").css({"background-image": "url(" + getSpotlightUrl("nepal-mobile.jpg") + ")"});
     $(".spotlight-tibet").css({"background-image": "url(" + getSpotlightUrl("tibet-mobile.jpg") + ")"});
-});
-
-enquire.register("(max-width: 767px) and (-webkit-min-device-pixel-ratio: 2)", function() {
-    $(".spotlight-kilimanjaro").css({"background-image": "url(" + getSpotlightUrl("kilimanjaro-mobile@2x.jpg") + ")"});
-    $(".spotlight-ebc").css({"background-image": "url(" + getSpotlightUrl("ebc-mobile@2x.jpg") + ")"});
-    $(".spotlight-nepal").css({"background-image": "url(" + getSpotlightUrl("nepal-mobile@2x.jpg") + ")"});
-    $(".spotlight-tibet").css({"background-image": "url(" + getSpotlightUrl("tibet-mobile@2x.jpg") + ")"});
 });

@@ -392,10 +392,6 @@ article.main-content {
   }
 }
 
-/* For retina display */
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
-}
-
 /* Landscape phones and down */
 @media (max-width: 480px) {
   $header-height: 54px;
