@@ -1,4 +1,4 @@
-# Perry's Gallery
+# Perry Photography
 
 ## Set up
 
