@@ -99,18 +99,6 @@ $footer-height: 86px;
 $loading-height: 30px;
 $logo-ratio: 0.718875502;
 
-/* Load font - Fira Sans */
-@font-face{
-  font-family: 'Fira Sans';
-  src: url('https://s3-us-west-1.amazonaws.com/perry-asia/font/FiraSans-Regular.eot');
-  src: local('Fira Sans Regular'),
-       url('https://s3-us-west-1.amazonaws.com/perry-asia/font/FiraSans-Regular.eot') format('embedded-opentype'),
-       url('https://s3-us-west-1.amazonaws.com/perry-asia/font/FiraSans-Regular.woff') format('woff'),
-       url('https://s3-us-west-1.amazonaws.com/perry-asia/font/FiraSans-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Basic features */
 
 html {

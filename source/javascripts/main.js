@@ -18,6 +18,12 @@ function getSpotlightUrl(filename) {
     }
 }
 
+if (country_code == "CN") {
+    $('head').append('<link href="http://fonts.useso.com/css?family=Fira+Sans" rel="stylesheet" type="text/css">');
+} else {
+    $('head').append('<link href="http://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" type="text/css">');
+}
+
 $(".logo").css({"background-image": "url(" + getBrandUrl("logo.svg") + ")"});
 
 enquire.register("(min-width: 768px)", function() {
