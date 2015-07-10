@@ -78,10 +78,10 @@
       window.country_code = "US";
       // Get the country code of the local ip
       function getIP(json) {
-        window.country_code = json.countryCode;
+        window.country_code = json.country_code;
       }
     </script>
-    <script src="http://ip-api.com/json/?callback=getIP"></script>
+    <script src="https://freegeoip.net/json/?callback=getIP"></script>
     <%= javascript_include_tag 'jquery-2.1.4.min', 'main', 'packery.pkgd.min', 'photoswipe-init', 'gallery' %>
 
     <!-- Google Analytics. -->

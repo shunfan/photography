@@ -4,7 +4,7 @@
 
 function getBrandUrl(filename) {
     if (country_code == "CN") {
-        return "http://7xk4al.com1.z0.glb.clouddn.com/brand-" + filename;
+        return "https://dn-perry-photography.qbox.me/brand-" + filename;
     } else {
         return "https://s3-us-west-1.amazonaws.com/perry-asia/brand/" + filename;
     }
@@ -12,16 +12,16 @@ function getBrandUrl(filename) {
 
 function getSpotlightUrl(filename) {
     if (country_code == "CN") {
-        return "http://7xk4al.com1.z0.glb.clouddn.com/spotlight-" + filename;
+        return "https://dn-perry-photography.qbox.me/spotlight-" + filename;
     } else {
         return "https://s3-us-west-1.amazonaws.com/perry-asia/spotlight/" + filename;
     }
 }
 
 if (country_code == "CN") {
-    $('head').append('<link href="http://fonts.useso.com/css?family=Fira+Sans" rel="stylesheet" type="text/css">');
+    $('head').append('<link href="https://dn-perry-photography.qbox.me/font-fira-sans.css" rel="stylesheet" type="text/css">');
 } else {
-    $('head').append('<link href="http://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" type="text/css">');
+    $('head').append('<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet" type="text/css">');
 }
 
 $(".logo").css({"background-image": "url(" + getBrandUrl("logo.svg") + ")"});

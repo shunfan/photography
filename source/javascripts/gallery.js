@@ -53,7 +53,7 @@ if (tibet.object != undefined) {
 function loadGallery(gallery) {
     function getImageUrl(gallery, index) {
         if (country_code == "CN") {
-            return "http://7xk4al.com1.z0.glb.clouddn.com/" + gallery.name + "-image" + index + ".jpg";
+            return "https://dn-perry-photography.qbox.me/" + gallery.name + "-image" + index + ".jpg";
         } else {
             return "https://s3-us-west-1.amazonaws.com/perry-asia/" + gallery.name + "/image" + index + ".jpg";
         }
@@ -61,7 +61,7 @@ function loadGallery(gallery) {
 
     function getThumbnailUrl(gallery, index) {
         if (country_code == "CN") {
-            return "http://7xk4al.com1.z0.glb.clouddn.com/" + gallery.name + "-thumbnail" + index + ".jpg";
+            return "https://dn-perry-photography.qbox.me/" + gallery.name + "-thumbnail" + index + ".jpg";
         } else {
             return "https://s3-us-west-1.amazonaws.com/perry-asia/" + gallery.name + "/thumbnail" + index + ".jpg";
         }
