@@ -37,7 +37,6 @@
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
   activate :directory_indexes
 end
 
@@ -57,6 +56,7 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   activate :directory_indexes
+  activate :minify_html, remove_intertag_spaces: true
 
   # For example, change the Compass output style for deployment
   activate :minify_css
