@@ -19,8 +19,12 @@ function getSpotlightUrl(filename) {
 }
 
 if (country_code == "CN") {
+    $('head').append('<link href="https://dn-perry-photography.qbox.me/brand-apple-touch-icon.png" rel="apple-touch-icon" type="image/png">');
+    $('head').append('<link href="https://dn-perry-photography.qbox.me/brand-favicon.png" rel="icon" type="image/png">');
     $('head').append('<link href="https://dn-perry-photography.qbox.me/font-fira-sans.css" rel="stylesheet" type="text/css">');
 } else {
+    $('head').append('<link href="https://s3-us-west-1.amazonaws.com/perry-asia/brand/apple-touch-icon.png" rel="apple-touch-icon" type="image/png">');
+    $('head').append('<link href="https://s3-us-west-1.amazonaws.com/perry-asia/brand/favicon.png" rel="icon" type="image/png">');
     $('head').append('<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet" type="text/css">');
 }
 
